@@ -9,8 +9,12 @@
     padding: 0;
     text-decoration: none;
     box-sizing: border-box;
-    scroll-behavior: smooth;
+
 }
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   font-family: 'Roboto', sans-serif; 
   background-color:rgb(232, 226, 241);
@@ -24,9 +28,8 @@ align-items: center;
 background-color: white;
 height:5rem;
 width: 100%;
-position: fixed;
 box-shadow: 0px 3px 6px  rgba(0, 0, 0, 0.35);
-
+position: fixed;
 }
 
 .nav_container .logo{
@@ -41,17 +44,21 @@ font-size: 20px;
    align-items: center;
    gap: 15px;
    margin:0px 10px;
+  
 }
 .nav_container  .nav-menu li a{
  font-family: 'Times New Roman', Times, serif;
  color: #0a0a00;
- font-size: 18px;
+ font-size: 20px;
+ font-weight:900;
 }
 .nav-menu li {
 list-style: none;
 }
-.nav_container  .nav-menu  li a:hover{
- color: rgb(71, 8, 247);
+.nav_container  .nav-menu  li a:hover,
+.nav_container  .nav-menu  li a.active
+{
+ color: rgb(247, 8, 147);
 }
 
 .header_container{
@@ -67,6 +74,40 @@ font-size: 70px;
 font-family: 'Times New Roman', Times, serif;
 padding-bottom: 20px;
 }
+
+.line{
+width: 200px;
+height: 5px;
+background-color: palevioletred;
+border-radius: 3px;
+margin: 10px auto;
+}
+
+/*------Animation keyframes---------*/
+.intro{
+  animation-name: slideInLeft;
+  animation-duration:1s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  }
+  
+@keyframes slideInLeft{
+ 0%{
+transform: translateY(-50px);
+ } 
+ 100%{
+transform: translateY(0);
+ }
+
+}
+/*----------CSS        TRANSITIONS----*/
+.personal_info{
+background-color: green;
+transition:background-color 2s linear 0s;
+}
+.personal_info:hover{
+background-color: red;
+}
 .header__left .intro{
 font-family: Georgia, 'Times New Roman', Times, serif;
 padding-bottom: 70px;
@@ -74,7 +115,12 @@ padding-bottom: 70px;
 .header__right-image .header_img {
 border-radius: 10%;
 height: 370px;
+transition: transform 1s ease-in 0s;
 }
+.header__right-image .header_img:hover{
+ transform: translateY(40px);
+  }
+
 .header__left .btn-primary{
   font-weight: bold;
   font-family: 'Times New Roman', Times, serif;
@@ -84,10 +130,15 @@ height: 370px;
   color: black;
   outline: none;
   cursor: pointer;
+  transition-property:background-color;
+  transition-duration:0s;
+  transition-timing-function: ease-in;
+ 
+
 }
 .header__left .btn-primary:hover{
 background-color:black ;
-color: yellow;
+color:yellow;
 }
 
 /*-------------EXPERTS CONTAINER------------*/
@@ -134,7 +185,7 @@ box-shadow: 1px 3px  white;
 border-radius: 30px;
 height: 22rem;
 background: white;
-box-shadow: 0px 3px 8px rgb(175, 175, 247);
+box-shadow: 1px 3px 8px rgb(175, 175, 247);
 }
 .expert_card:hover{
 box-shadow: none;
@@ -164,9 +215,7 @@ padding: 20px;
   margin-top: 5px;
   padding-top: 8px;
   width: 90%;
-
 }
-
 .writer_score h6{
 font-weight: bold;
 font-size: 15px;
@@ -299,14 +348,12 @@ text-align: center;
   padding: 10px;
   font-weight: bold;
 }
-
 .features_image {
 align-items: center;
 height: 50px;
 width: 50px;
 background-color: rgb(1, 1, 8);
 border-radius: 40px;
-
 }
 .btn-container{
 background-color: #fffb00;
@@ -332,6 +379,7 @@ padding: 10px 20px;
 .footer_container{
 height: 14rem;
 width: 100%;
+border-bottom-left-radius: 30px;
 display: grid;
 grid-template-rows: 3fr 1fr;
 }
@@ -410,7 +458,26 @@ background-color: #b4aef7;
 }
 
 
+article{
+height: 14rem;
+color: red;
+}
 
+.marketing_info{
+  background-color: white;
+}
+
+.marketing_details{
+  display: grid;
+  grid-template-columns:1fr 1fr;
+ 
+}
+
+.ctn_image{
+  padding-left: 60px;
+  height: 300px;
+  width: 400px;
+}
 
 
 
