@@ -7,12 +7,13 @@
 *{
     margin: 0;
     padding: 0;
-    text-decoration: none;
     box-sizing: border-box;
+    text-decoration: none;
 
 }
 html{
   scroll-behavior: smooth;
+  
 }
 
 body{
@@ -97,7 +98,7 @@ transform: translateX(-50px);
 transform: translateX(0);
  }
 }
-/*----------CSS        TRANSITIONS----*/
+/*----------CSS TRANSITIONS----*/
 .personal_info{
 background-color: green;
 transition:background-color 2s linear 0s;
@@ -292,27 +293,6 @@ gap: 80px;
 ul li{
   list-style: circle;
 }
-/*------Call to Action Section--------------------------------------------*/
-article{
-  height: 14rem;
-  color: red;
-  }
-  
-  .marketing_info{
-    background-color: white;
-  }
-  
-  .marketing_details{
-    display: grid;
-    grid-template-columns:1fr 1fr;
-   
-  }
-  
-  .ctn_image{
-    padding-left: 60px;
-    height: 300px;
-    width: 400px;
-  }
 /*------About Us Section--------------------------------------------*/
 .why_us{
 background-color: rgb(247, 244, 244);
@@ -379,39 +359,109 @@ color: yellow;
 font-size: 18px;
 padding: 10px 20px;
 }
-
-/*------Contact Us--------*/
-.contact_us{
-background-color: #63739b;
-height: 28rem;
-width: 100%;
+/*---------------------Contact Us--------------------------*/
+.contact_us {
+  height: 35rem;
+  background-color: #50504d;
 }
-.contact_us .contact_into{
+.contact-section{
+  width: 100%;
   display: flex;
   justify-content: center;
-  padding: 20px;
+  align-items: center;
+
+}
+.contact-info{
+  display: flex;
+  flex-direction: column;
   
+  color: #fff;
+  max-width: 600px;
+  line-height: 50px;
+  padding-left: 15px;
+  padding-top: 100px;
+  font-size: 25px;
 }
-.contact_into  .contact_heading{
-
-font-weight: bold;
-font-family: 'Courier New', Courier, monospace;
-font-size: 30px;
-}
- .contact_us  .contact_info{
-display: grid;
-grid-template-columns: 1fr 1fr;
- margin: 30px 280px;
-
-
-
+.contact-info i{
+  color: #000;
+  margin: 20px;
+  font-size: 25px;
+  background-color: yellow;
+  padding: 12px;
+  border-radius: 50%;
 }
 
+.contact-form{
 
-
-
-
-/*------Footer--------*/
+  max-width: 700px;
+  margin-right: 5px;
+  position: relative;
+}
+.contact-info, .contact-form{
+  flex: 1;
+}
+.contact-form .contact_header{
+  color: #fff;
+  text-align: center;
+  font-size: 35px;
+  text-transform: uppercase;
+  margin: 40px;
+}
+.contact-form .text-box{
+  background: #000;
+  color: #fff;
+  border: none;
+  width: calc(50% - 10px);
+  height: 50px;
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+.contact-form textarea{
+  background: #000;
+  color: #fff;
+  border: none;
+  width: 98%;
+  padding: 12px;
+  font-size: 15px;
+  min-height: 100px;
+  max-height: 250px;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+.contact-form .send-btn{
+  background: #2E94E3;
+  color: #fff;
+  border: none;
+  width: 120px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  transition-property: background;
+}
+input .text-box{
+  border-color: red;
+}
+.contact-form .send-btn:hover{
+  background:yellow;
+  color: black;
+}
+.submitting{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*-----------------------------------------Footer--------------------------------------------*/
 .footer_container{
 height: 14rem;
 width: 100%;
@@ -495,11 +545,111 @@ background-color: #b4aef7;
 
 
 
+/*----------- Testimonial Slider  CSS---*/
+.section_padding{
+  height: 80vh;
+  background-color: #000;
+}
 
+#testimonial_area {
+	padding: 10% 0;
+}
+.box-area {
+	padding: 30px;
+	position: relative;
+	display: block;
+	background: #fff;
+	color: #000;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	margin: 40px 0;
+}
+.box-area h5 {
+	font-size: 16px;
+	font-weight: 700;
+	color: #0a69ed;
+	margin-top: 30px;
+	margin-bottom: 5px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.box-area span {
+	color: #262626;
+	display: block;
+	font-size: 13px;
+	margin: 0 0 10px;
+	font-weight: 400;
+}
+.box-area .content {
+	color: #262626;
+}
+.box-area .img-area {
+	width: 90px;
+	height: 90px;
+	position: absolute;
+	top: -40px;
+	left: 0;
+	bottom: 0;
+	margin: 0 auto;
+	right: 0;
+	z-index: 1;
+	border: 5px solid #fff;
+	border-radius: 50%;
+	box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+}
+.box-area .img-area img {
+	width: 100%;
+	height: auto;
+	border-radius: 50%;
+}
+.socials {
+	margin-top: 30px;
+}
+.socials i {
+	margin: 0 10px;
+	color: #0a69ed;
+	font-size: 18px;
+}
+#testimonial_area .owl-nav {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+}
+#testimonial_area .owl-prev, #testimonial_area .owl-next {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	color: #0a69ed;
+	border-radius: 50%;
+	text-align: center;
+	background: #fff;
+	position: absolute;
+}
+#testimonial_area .owl-prev {
+	left: -60px;
+	top: -30px;
+}
+#testimonial_area .owl-next {
+	right: -60px;
+	top: -30px;
+}
 
+@media screen and (max-width: 950px){
+  .contact-section{
+    flex-direction: column;
+  }
 
+  .contact-info, .contact-form{
+    margin: 30px 50px;
+  }
 
+  .contact-form h2{
+    font-size: 30px;
+  }
 
+  .contact-form .text-box{
+    width: 100%;
+  }
+}
 
 
 
