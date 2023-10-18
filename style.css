@@ -77,34 +77,34 @@ padding-bottom: 20px;
 }
 
 .line{
-width: 200px;
+width: 100px;
 height: 5px;
 background-color: palevioletred;
 border-radius: 3px;
 margin: 10px auto;
 }
 /*------Animation keyframes---------*/
-.intro{
+.features_card{
   animation-name: slideInLeft;
-  animation-duration:3s;
+  animation-duration:1s;
   animation-timing-function: ease-out;
   animation-delay: 0s;
   }
 @keyframes slideInLeft{
  0%{
-transform: translateX(-50px);
+transform: translateY(-18px);
  } 
  100%{
-transform: translateX(0);
+transform: translateY(0);
  }
 }
 /*----------CSS TRANSITIONS----*/
 .personal_info{
 background-color: green;
-transition:background-color 2s linear 0s;
+transition:background-color 21 ease-in 0s;
 }
 .personal_info:hover{
-background-color: red;
+background-color: rgb(247, 193, 193);
 }
 .header__left .intro{
 font-family: Georgia, 'Times New Roman', Times, serif;
