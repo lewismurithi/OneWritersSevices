@@ -34,7 +34,7 @@ position: fixed;
 }
 
 .nav_container .logo{
-margin-left: 40px;
+margin-left: 41px;
 font-weight: bold;
 font-size: 20px;
 }
@@ -71,7 +71,7 @@ padding: 100px;
 }
 .header__left h1{
 font-weight: bold;
-font-size: 70px;
+font-size: 71px;
 font-family: 'Times New Roman', Times, serif;
 padding-bottom: 20px;
 }
@@ -92,7 +92,7 @@ margin: 10px auto;
   }
 @keyframes slideInLeft{
  0%{
-transform: translateX(-50px);
+transform: translateX(-48px);
  } 
  100%{
 transform: translateX(0);
