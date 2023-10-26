@@ -86,16 +86,16 @@ margin: 10px auto;
 /*------Animation keyframes---------*/
 .intro{
   animation-name: slideInLeft;
-  animation-duration:3s;
+  animation-duration:1s;
   animation-timing-function: ease-out;
   animation-delay: 0s;
   }
 @keyframes slideInLeft{
  0%{
-transform: translateX(-48px);
+transform: translateY(-48px);
  } 
  100%{
-transform: translateX(0);
+transform: translateY(0);
  }
 }
 /*----------CSS TRANSITIONS----*/
